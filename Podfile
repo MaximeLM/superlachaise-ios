@@ -5,6 +5,8 @@ target 'SuperLachaise' do
 
   pod 'RealmSwift'
   pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxRealm'
 
 end
 

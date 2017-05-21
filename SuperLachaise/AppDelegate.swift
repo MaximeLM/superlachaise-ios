@@ -18,10 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure Realm
         if let realmFileURL = Bundle.main.url(forResource: "SuperLachaise", withExtension: "realm") {
             Realm.Configuration.defaultConfiguration = Realm.Configuration(fileURL: realmFileURL, readOnly: true)
+            do {
+                _ = try Realm()
+            } catch {
+                assertionFailure("\(error)")
+            }
         } else {
             assertionFailure()
         }
-        
         return true
     }
     
