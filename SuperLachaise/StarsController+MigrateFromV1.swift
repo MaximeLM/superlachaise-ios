@@ -20,7 +20,7 @@ extension StarsController {
                 self.starredIDs.value.formUnion(starredIDs)
                 print("Migrated \(starredIDs.count) stars from store V1")
             }, onError: { error in
-                print("Could not migrate stars from store V1: \(error)")
+                print("Error when migrating stars from store V1: \(error)")
             }, onCompleted: {
                 print("No store V1 to migrate")
             })
@@ -36,16 +36,23 @@ fileprivate extension StarsController {
             .map(loadContext)
             .flatMap(fetchStarredV1IDs)
             .flatMap(fetchStarredV2IDs)
+            .do(onNext: { _ in
+                try deleteStoreV1()
+            })
+    }
+    
+    static func storeV1URL() throws -> URL {
+        let documentsDir = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        return documentsDir.appendingPathComponent("PLData.sqlite")
     }
     
     static func existingStoreV1URL() -> Maybe<URL> {
         return Maybe<URL>
             .create { observer in
                 do {
-                    let fm = FileManager.default
-                    let documentsDir = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-                    let storeURL = documentsDir.appendingPathComponent("PLData.sqlite")
-                    if fm.fileExists(atPath: storeURL.path) {
+                    let storeURL = try self.storeV1URL()
+                    if FileManager.default.fileExists(atPath: storeURL.path) {
+                        print(storeURL.path)
                         observer(.success(storeURL))
                     } else {
                         observer(.completed)
@@ -71,7 +78,7 @@ fileprivate extension StarsController {
         return context
     }
     
-    static func fetchStarredV1IDs(context: NSManagedObjectContext) -> Maybe<[Int64]> {
+    static func fetchStarredV1IDs(context: NSManagedObjectContext) -> Maybe<[NSNumber]> {
         return Maybe.create { observer in
             context.perform {
                 do {
@@ -85,7 +92,7 @@ fileprivate extension StarsController {
         }
     }
     
-    static func starredV1IDs(context: NSManagedObjectContext) throws -> [Int64] {
+    static func starredV1IDs(context: NSManagedObjectContext) throws -> [NSNumber] {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PLNodeOSM")
         fetchRequest.predicate = NSPredicate(format: "monument.circuit == 1")
         
@@ -94,19 +101,24 @@ fileprivate extension StarsController {
                 guard let id = nodeOSM.value(forKey: "id") as? NSNumber else {
                     throw MigrateStarsFromV1Error.invalidManagedObject
                 }
-                return id.int64Value
+                return id
             }
     }
     
-    static func fetchStarredV2IDs(starredV1IDs: [Int64]) -> Maybe<[String]> {
+    static func fetchStarredV2IDs(starredV1IDs: [NSNumber]) -> Maybe<[String]> {
         return Maybe.create { observer in
             autoreleasepool {
                 do {
                     let realm = try Realm()
-                    let stars = try starredV1IDs
-                        .flatMap { starredV1ID in
-                            return try starredV2IDs(starredV1ID: starredV1ID, realm: realm)
-                    }
+                    let stars = starredV1IDs
+                        .flatMap { starredV1ID -> String? in
+                            do {
+                                return try starredV2IDs(starredV1ID: starredV1ID, realm: realm)
+                            } catch {
+                                print(error)
+                                return nil
+                            }
+                        }
                     observer(.success(stars))
                 } catch {
                     observer(.error(error))
@@ -116,16 +128,40 @@ fileprivate extension StarsController {
         }
     }
     
-    static func starredV2IDs(starredV1ID: Int64, realm: Realm) throws -> String? {
+    static func starredV2IDs(starredV1ID: NSNumber, realm: Realm) throws -> String {
         let predicate = NSPredicate(format: "numericID == %@", starredV1ID)
         let openStreetMapElement = realm.objects(OpenStreetMapElement.self).filter(predicate).first
-        return openStreetMapElement?.wikidataEntry?.id
+        guard let starredV2ID = openStreetMapElement?.wikidataEntry?.id else {
+            throw MigrateStarsFromV1Error.unknownStarredV1ID(starredV1ID: starredV1ID)
+        }
+        return starredV2ID
+    }
+    
+    static func deleteStoreV1() throws {
+        let storeURL = try self.storeV1URL()
+        if FileManager.default.fileExists(atPath: storeURL.path) {
+            try FileManager.default.removeItem(at: storeURL)
+        }
     }
     
 }
 
-fileprivate enum MigrateStarsFromV1Error: Error {
+fileprivate enum MigrateStarsFromV1Error: Error, CustomStringConvertible {
     case managedObjectModelNotFound
     case invalidManagedObjectModel
     case invalidManagedObject
+    case unknownStarredV1ID(starredV1ID: NSNumber)
+    
+    var description: String {
+        switch self {
+        case .managedObjectModelNotFound:
+            return "managed object model not found"
+        case .invalidManagedObjectModel:
+            return "invalid managed object model"
+        case .invalidManagedObject:
+            return "invalid managed object"
+        case let .unknownStarredV1ID(starredV1ID):
+            return "unknown starred V1 ID \(starredV1ID)"
+        }
+    }
 }
