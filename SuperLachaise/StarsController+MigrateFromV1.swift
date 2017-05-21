@@ -52,7 +52,6 @@ fileprivate extension StarsController {
                 do {
                     let storeURL = try self.storeV1URL()
                     if FileManager.default.fileExists(atPath: storeURL.path) {
-                        print(storeURL.path)
                         observer(.success(storeURL))
                     } else {
                         observer(.completed)
@@ -129,12 +128,10 @@ fileprivate extension StarsController {
     }
     
     static func starredV2IDs(starredV1ID: NSNumber, realm: Realm) throws -> String {
-        let predicate = NSPredicate(format: "numericID == %@", starredV1ID)
-        let openStreetMapElement = realm.objects(OpenStreetMapElement.self).filter(predicate).first
-        guard let starredV2ID = openStreetMapElement?.wikidataEntry?.id else {
+        guard let mapping = realm.object(ofType: StoreV1NodeIdMapping.self, forPrimaryKey: starredV1ID.int64Value), let wikidataEntry = mapping.wikidataEntry else {
             throw MigrateStarsFromV1Error.unknownStarredV1ID(starredV1ID: starredV1ID)
         }
-        return starredV2ID
+        return wikidataEntry.id
     }
     
     static func deleteStoreV1() throws {
