@@ -7,10 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        // Configure Realm
+        if let realmFileURL = Bundle.main.url(forResource: "SuperLachaise", withExtension: "realm") {
+            Realm.Configuration.defaultConfiguration = Realm.Configuration(fileURL: realmFileURL, readOnly: true)
+        } else {
+            assertionFailure()
+        }
+        
+        return true
+    }
     
 }
