@@ -7,8 +7,11 @@ target 'SuperLachaise' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxRealm'
+  pod 'ReSwift'
 
 end
+
+pod 'SwiftLint'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

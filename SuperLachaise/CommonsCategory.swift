@@ -10,14 +10,14 @@ import Foundation
 import RealmSwift
 
 final class CommonsCategory: Object {
-    
+
     dynamic var id = ""
-    
+
     let commonsFiles = List<CommonsFile>()
     let wikidataEntries = LinkingObjects(fromType: WikidataEntry.self, property: "commonsCategory")
-    
+
     override class func primaryKey() -> String? {
         return "id"
     }
-    
+
 }

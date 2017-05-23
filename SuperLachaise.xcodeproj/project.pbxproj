@@ -180,6 +180,7 @@
 				556717AB1ED201F700C3A0A2 /* Resources */,
 				233F61380810AA883DA6294F /* [CP] Embed Pods Frameworks */,
 				38F5988A4E30130169AD04D5 /* [CP] Copy Pods Resources */,
+				55D75B401ED4E838003CD30C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,6 +268,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuperLachaise/Pods-SuperLachaise-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		55D75B401ED4E838003CD30C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		74604245CB5E2CB318CDBE5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

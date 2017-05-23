@@ -12,7 +12,7 @@ import RealmSwift
 import RxSwift
 
 extension StarsController {
-    
+
     func migrateFromStoreV1IfNeeded() {
         StarsController.starredIDsFromV1()
             .observeOn(MainScheduler.asyncInstance)
@@ -26,11 +26,11 @@ extension StarsController {
             })
             .disposed(by: disposeBag)
     }
-    
+
 }
 
 fileprivate extension StarsController {
-    
+
     static func starredIDsFromV1() -> Maybe<[String]> {
         return existingStoreV1URL()
             .map(loadContext)
@@ -40,12 +40,14 @@ fileprivate extension StarsController {
                 try deleteStoreV1()
             })
     }
-    
+
     static func storeV1URL() throws -> URL {
-        let documentsDir = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        let documentsDir = try FileManager.default.url(for: .documentDirectory,
+                                                       in: .userDomainMask,
+                                                       appropriateFor: nil, create: false)
         return documentsDir.appendingPathComponent("PLData.sqlite")
     }
-    
+
     static func existingStoreV1URL() -> Maybe<URL> {
         return Maybe<URL>
             .create { observer in
@@ -62,7 +64,7 @@ fileprivate extension StarsController {
                 return Disposables.create()
             }
     }
-    
+
     static func loadContext(storeURL: URL) throws -> NSManagedObjectContext {
         guard let modelURL = Bundle.main.url(forResource: "SuperLachaiseV1", withExtension: "momd") else {
             throw MigrateStarsFromV1Error.managedObjectModelNotFound
@@ -71,12 +73,13 @@ fileprivate extension StarsController {
             throw MigrateStarsFromV1Error.invalidManagedObjectModel
         }
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
-        try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+        try coordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+                                           configurationName: nil, at: storeURL, options: nil)
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.persistentStoreCoordinator = coordinator
         return context
     }
-    
+
     static func fetchStarredV1IDs(context: NSManagedObjectContext) -> Maybe<[NSNumber]> {
         return Maybe.create { observer in
             context.perform {
@@ -90,11 +93,11 @@ fileprivate extension StarsController {
             return Disposables.create()
         }
     }
-    
+
     static func starredV1IDs(context: NSManagedObjectContext) throws -> [NSNumber] {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PLNodeOSM")
         fetchRequest.predicate = NSPredicate(format: "monument.circuit == 1")
-        
+
         return try context.fetch(fetchRequest)
             .map { nodeOSM in
                 guard let id = nodeOSM.value(forKey: "id") as? NSNumber else {
@@ -103,7 +106,7 @@ fileprivate extension StarsController {
                 return id
             }
     }
-    
+
     static func fetchStarredV2IDs(starredV1IDs: [NSNumber]) -> Maybe<[String]> {
         return Maybe.create { observer in
             autoreleasepool {
@@ -126,21 +129,22 @@ fileprivate extension StarsController {
             return Disposables.create()
         }
     }
-    
+
     static func starredV2IDs(starredV1ID: NSNumber, realm: Realm) throws -> String {
-        guard let mapping = realm.object(ofType: StoreV1NodeIdMapping.self, forPrimaryKey: starredV1ID.int64Value), let wikidataEntry = mapping.wikidataEntry else {
+        guard let mapping = realm.object(ofType: StoreV1NodeIdMapping.self, forPrimaryKey: starredV1ID.int64Value),
+            let wikidataEntry = mapping.wikidataEntry else {
             throw MigrateStarsFromV1Error.unknownStarredV1ID(starredV1ID: starredV1ID)
         }
         return wikidataEntry.id
     }
-    
+
     static func deleteStoreV1() throws {
         let storeURL = try self.storeV1URL()
         if FileManager.default.fileExists(atPath: storeURL.path) {
             try FileManager.default.removeItem(at: storeURL)
         }
     }
-    
+
 }
 
 fileprivate enum MigrateStarsFromV1Error: Error, CustomStringConvertible {
@@ -148,7 +152,7 @@ fileprivate enum MigrateStarsFromV1Error: Error, CustomStringConvertible {
     case invalidManagedObjectModel
     case invalidManagedObject
     case unknownStarredV1ID(starredV1ID: NSNumber)
-    
+
     var description: String {
         switch self {
         case .managedObjectModelNotFound:
