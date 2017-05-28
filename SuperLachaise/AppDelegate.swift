@@ -6,8 +6,8 @@
 //
 //
 
-import UIKit
 import RealmSwift
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
