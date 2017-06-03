@@ -26,6 +26,7 @@
 		556717F21ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 556717F01ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld */; };
 		556717FE1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717FD1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift */; };
 		556718021ED2567900C3A0A2 /* SuperLachaise.realm in Resources */ = {isa = PBXBuildFile; fileRef = 556718011ED2567900C3A0A2 /* SuperLachaise.realm */; };
+		55F502541EDCB2DC00176DD9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F502531EDCB2DC00176DD9 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		556717F11ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuperLachaiseV1.xcdatamodel; sourceTree = "<group>"; };
 		556717FD1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreV1NodeIdMapping.swift; sourceTree = "<group>"; };
 		556718011ED2567900C3A0A2 /* SuperLachaise.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = SuperLachaise.realm; path = "../../../superlachaise-database/Realm/SuperLachaise.realm"; sourceTree = "<group>"; };
+		55F502531EDCB2DC00176DD9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		7A33461299EF1C8F422B3C1E /* Pods_SuperLachaise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperLachaise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BD17D8AB76BEC395063267 /* Pods-SuperLachaise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperLachaise.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperLachaise/Pods-SuperLachaise.release.xcconfig"; sourceTree = "<group>"; };
 		FB4C9EB41C6156D0C8976542 /* Pods-SuperLachaise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperLachaise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperLachaise/Pods-SuperLachaise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				556717C71ED202E300C3A0A2 /* UI */,
 				556717B71ED201F700C3A0A2 /* Assets.xcassets */,
 				556717CA1ED2072D00C3A0A2 /* Resources */,
+				55F502521EDCB2B400176DD9 /* Utils */,
 				556717C61ED202D700C3A0A2 /* Supporting Files */,
 			);
 			path = SuperLachaise;
@@ -156,6 +159,14 @@
 				556717EA1ED213C400C3A0A2 /* StarsController+MigrateFromV1.swift */,
 			);
 			name = Stars;
+			sourceTree = "<group>";
+		};
+		55F502521EDCB2B400176DD9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				55F502531EDCB2DC00176DD9 /* Store.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		E6FFBC1DDE575C21CFFE052B /* Pods */ = {
@@ -304,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F502541EDCB2DC00176DD9 /* Store.swift in Sources */,
 				556717E21ED20BB300C3A0A2 /* WikipediaPage.swift in Sources */,
 				556717DF1ED20BB300C3A0A2 /* OpenStreetMapElement.swift in Sources */,
 				556717E01ED20BB300C3A0A2 /* WikidataDate.swift in Sources */,
