@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C12B45F8DC321D4E7F2B71B /* Pods_SuperLachaise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A33461299EF1C8F422B3C1E /* Pods_SuperLachaise.framework */; };
+		554239331EE2EACD00C19067 /* StarsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554239321EE2EACD00C19067 /* StarsStore.swift */; };
+		554239371EE2F20600C19067 /* StarsStore+MigrateFromV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554239361EE2F20600C19067 /* StarsStore+MigrateFromV1.swift */; };
 		556717B11ED201F700C3A0A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717B01ED201F700C3A0A2 /* AppDelegate.swift */; };
 		556717B81ED201F700C3A0A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556717B71ED201F700C3A0A2 /* Assets.xcassets */; };
 		556717C41ED202B800C3A0A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556717C21ED202B800C3A0A2 /* LaunchScreen.storyboard */; };
@@ -21,8 +23,6 @@
 		556717E01ED20BB300C3A0A2 /* WikidataDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D71ED20BB300C3A0A2 /* WikidataDate.swift */; };
 		556717E11ED20BB300C3A0A2 /* WikidataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D81ED20BB300C3A0A2 /* WikidataEntry.swift */; };
 		556717E21ED20BB300C3A0A2 /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D91ED20BB300C3A0A2 /* WikipediaPage.swift */; };
-		556717E71ED210BB00C3A0A2 /* StarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717E61ED210BB00C3A0A2 /* StarsController.swift */; };
-		556717EB1ED213C400C3A0A2 /* StarsController+MigrateFromV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717EA1ED213C400C3A0A2 /* StarsController+MigrateFromV1.swift */; };
 		556717F21ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 556717F01ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld */; };
 		556717FE1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717FD1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift */; };
 		556718021ED2567900C3A0A2 /* SuperLachaise.realm in Resources */ = {isa = PBXBuildFile; fileRef = 556718011ED2567900C3A0A2 /* SuperLachaise.realm */; };
@@ -30,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		554239321EE2EACD00C19067 /* StarsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsStore.swift; sourceTree = "<group>"; };
+		554239361EE2F20600C19067 /* StarsStore+MigrateFromV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarsStore+MigrateFromV1.swift"; sourceTree = "<group>"; };
 		556717AD1ED201F700C3A0A2 /* SuperLachaise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperLachaise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556717B01ED201F700C3A0A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556717B71ED201F700C3A0A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,6 +159,8 @@
 			children = (
 				556717E61ED210BB00C3A0A2 /* StarsController.swift */,
 				556717EA1ED213C400C3A0A2 /* StarsController+MigrateFromV1.swift */,
+				554239321EE2EACD00C19067 /* StarsStore.swift */,
+				554239361EE2F20600C19067 /* StarsStore+MigrateFromV1.swift */,
 			);
 			name = Stars;
 			sourceTree = "<group>";
@@ -316,11 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F502541EDCB2DC00176DD9 /* Store.swift in Sources */,
+				554239331EE2EACD00C19067 /* StarsStore.swift in Sources */,
+				554239371EE2F20600C19067 /* StarsStore+MigrateFromV1.swift in Sources */,
 				556717E21ED20BB300C3A0A2 /* WikipediaPage.swift in Sources */,
 				556717DF1ED20BB300C3A0A2 /* OpenStreetMapElement.swift in Sources */,
 				556717E01ED20BB300C3A0A2 /* WikidataDate.swift in Sources */,
-				556717E71ED210BB00C3A0A2 /* StarsController.swift in Sources */,
-				556717EB1ED213C400C3A0A2 /* StarsController+MigrateFromV1.swift in Sources */,
 				556717E11ED20BB300C3A0A2 /* WikidataEntry.swift in Sources */,
 				556717DC1ED20BB300C3A0A2 /* CommonsFile.swift in Sources */,
 				556717DB1ED20BB300C3A0A2 /* CommonsCategory.swift in Sources */,

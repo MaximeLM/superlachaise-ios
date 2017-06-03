@@ -10,24 +10,20 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-typealias Dispatch<Action> = (Action) -> Void
-
 /**
  Redux-like store
  */
 class Store<State, Action> {
 
-    typealias Reducer = (Action, State) -> State
-
     let state: Variable<State>
-    let reducer: Reducer
+    let reducer: (Action, State) -> State
 
     private let actions = PublishSubject<Action>()
     private let dispatchQueue: DispatchQueue
     let disposeBag = DisposeBag()
 
     init(initialState: State,
-         reducer: @escaping Reducer,
+         reducer: @escaping (Action, State) -> State,
          dispatchQueue: DispatchQueue = DispatchQueue.main) {
         self.state = Variable(initialState)
         self.reducer = reducer
