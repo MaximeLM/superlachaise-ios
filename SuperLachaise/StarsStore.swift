@@ -8,26 +8,39 @@
 
 import Foundation
 
-class StarsStore: Store<StarsStore.State, StarsStore.Action> {
+struct StarsStoreState {
+    // Wikidata IDs for primary wikidata entries (more stable than OpenStreetMap IDs)
+    var starsIDs: Set<String>
+    var migrateFromV1State: StarsStore.MigrateFromV1State
+}
 
-    struct State {
-        // Wikidata IDs for primary wikidata entries (more stable than OpenStreetMap IDs)
-        var starsIDs: Set<String>
-        var migrateFromV1State: MigrateFromV1State
-    }
+enum StarsStoreAction {
+    case addStar(id: String)
+    case removeStar(id: String)
+    case migrateFromV1Action(action: StarsStore.MigrateFromV1Action)
+}
 
-    enum Action {
-        case addStar(id: String)
-        case removeStar(id: String)
-        case migrateFromV1Action(action: MigrateFromV1Action)
-    }
+class StarsStore: Store<StarsStoreState, StarsStoreAction> {
+
+    static let shared = StarsStore()
 
     init() {
         let migrateFromV1State = MigrateFromV1State(didMigrate: StarsStore.didMigrateFromV1)
-        let initialState = State(starsIDs: Set(StarsStore.starsIDs),
-                                 migrateFromV1State: migrateFromV1State)
+        let initialState = StarsStoreState(starsIDs: Set(StarsStore.starsIDs),
+                                           migrateFromV1State: migrateFromV1State)
         super.init(initialState: initialState,
                    reducer: StarsStore.reduce)
+
+    #if DEBUG
+        state.asObservable()
+            .debug("StarsStore.state")
+            .subscribe()
+            .disposed(by: disposeBag)
+        actions
+            .debug("StarsStore.actions")
+            .subscribe()
+            .disposed(by: disposeBag)
+    #endif
 
         // Save state to user defaults
         state.asObservable()
@@ -36,6 +49,11 @@ class StarsStore: Store<StarsStore.State, StarsStore.Action> {
                 StarsStore.starsIDs = Array(state.starsIDs)
             })
             .disposed(by: disposeBag)
+
+        // Migrate from V1 if needed
+        if !migrateFromV1State.didMigrate {
+            migrateFromV1()
+        }
     }
 
 }
@@ -44,7 +62,7 @@ class StarsStore: Store<StarsStore.State, StarsStore.Action> {
 
 fileprivate extension StarsStore {
 
-    static func reduce(action: Action, state: State) -> State {
+    static func reduce(action: StarsStoreAction, state: StarsStoreState) -> StarsStoreState {
         var state = state
         switch action {
         case let .addStar(id):

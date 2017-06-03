@@ -47,8 +47,6 @@
 		556717D71ED20BB300C3A0A2 /* WikidataDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikidataDate.swift; sourceTree = "<group>"; };
 		556717D81ED20BB300C3A0A2 /* WikidataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikidataEntry.swift; sourceTree = "<group>"; };
 		556717D91ED20BB300C3A0A2 /* WikipediaPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
-		556717E61ED210BB00C3A0A2 /* StarsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsController.swift; sourceTree = "<group>"; };
-		556717EA1ED213C400C3A0A2 /* StarsController+MigrateFromV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarsController+MigrateFromV1.swift"; sourceTree = "<group>"; };
 		556717F11ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuperLachaiseV1.xcdatamodel; sourceTree = "<group>"; };
 		556717FD1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreV1NodeIdMapping.swift; sourceTree = "<group>"; };
 		556718011ED2567900C3A0A2 /* SuperLachaise.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = SuperLachaise.realm; path = "../../../superlachaise-database/Realm/SuperLachaise.realm"; sourceTree = "<group>"; };
@@ -157,8 +155,6 @@
 		556717E51ED210B000C3A0A2 /* Stars */ = {
 			isa = PBXGroup;
 			children = (
-				556717E61ED210BB00C3A0A2 /* StarsController.swift */,
-				556717EA1ED213C400C3A0A2 /* StarsController+MigrateFromV1.swift */,
 				554239321EE2EACD00C19067 /* StarsStore.swift */,
 				554239361EE2F20600C19067 /* StarsStore+MigrateFromV1.swift */,
 			);

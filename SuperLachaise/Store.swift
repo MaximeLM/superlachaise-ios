@@ -16,10 +16,10 @@ import RxSwift
 class Store<State, Action> {
 
     let state: Variable<State>
+    let actions = PublishSubject<Action>()
     let reducer: (Action, State) -> State
 
-    private let actions = PublishSubject<Action>()
-    private let dispatchQueue: DispatchQueue
+    let dispatchQueue: DispatchQueue
     let disposeBag = DisposeBag()
 
     init(initialState: State,
@@ -33,7 +33,6 @@ class Store<State, Action> {
             .withLatestFrom(state.asObservable(), resultSelector: reducer)
             .bind(to: state)
             .disposed(by: disposeBag)
-
     }
 
     func dispatch(action: Action) {
