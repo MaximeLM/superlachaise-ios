@@ -149,11 +149,11 @@ fileprivate extension StarsStore {
                 autoreleasepool {
                     do {
                         let realm = try Realm()
-                        let starIDs = try fetchStarsIDsFromV1(context: context)
-                            .flatMap { starIDFromV1 -> String? in
-                                return starID(for: starIDFromV1, realm: realm)
+                        let starsIds = try fetchStarsIdsFromV1(context: context)
+                            .flatMap { starIdFromV1 -> String? in
+                                return starId(for: starIdFromV1, realm: realm)
                             }
-                        observer(.success(starIDs))
+                        observer(.success(starsIds))
                     } catch {
                         observer(.error(error))
                     }
@@ -179,7 +179,7 @@ fileprivate extension StarsStore {
         return context
     }
 
-    static func fetchStarsIDsFromV1(context: NSManagedObjectContext) throws -> [Int64] {
+    static func fetchStarsIdsFromV1(context: NSManagedObjectContext) throws -> [Int64] {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PLNodeOSM")
         fetchRequest.predicate = NSPredicate(format: "monument.circuit == 1")
         return try context.fetch(fetchRequest)
@@ -191,7 +191,7 @@ fileprivate extension StarsStore {
             }
     }
 
-    static func starID(for starIdFromV1: Int64, realm: Realm) -> String? {
+    static func starId(for starIdFromV1: Int64, realm: Realm) -> String? {
         guard let mapping = realm.object(ofType: StoreV1NodeIdMapping.self, forPrimaryKey: starIdFromV1),
             let wikidataEntry = mapping.wikidataEntry else {
                 print("Unknown star Id: \(starIdFromV1)")

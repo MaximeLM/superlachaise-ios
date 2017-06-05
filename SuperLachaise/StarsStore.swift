@@ -9,8 +9,8 @@
 import Foundation
 
 struct StarsStoreState {
-    // Wikidata IDs for primary wikidata entries (more stable than OpenStreetMap IDs)
-    var starsIDs: Set<String>
+    // Wikidata ids for primary wikidata entries (more stable than OpenStreetMap ids)
+    var starsIds: Set<String>
     var migrateFromV1State: StarsStore.MigrateFromV1State
 }
 
@@ -26,7 +26,7 @@ class StarsStore: Store<StarsStoreState, StarsStoreAction> {
 
     init() {
         let migrateFromV1State = MigrateFromV1State(didMigrate: StarsStore.didMigrateFromV1)
-        let initialState = StarsStoreState(starsIDs: Set(StarsStore.starsIDs),
+        let initialState = StarsStoreState(starsIds: Set(StarsStore.starsIds),
                                            migrateFromV1State: migrateFromV1State)
         super.init(initialState: initialState,
                    reducer: StarsStore.reduce)
@@ -46,7 +46,7 @@ class StarsStore: Store<StarsStoreState, StarsStoreAction> {
         state.asObservable()
             .subscribe(onNext: { state in
                 StarsStore.didMigrateFromV1 = state.migrateFromV1State.didMigrate
-                StarsStore.starsIDs = Array(state.starsIDs)
+                StarsStore.starsIds = Array(state.starsIds)
             })
             .disposed(by: disposeBag)
 
@@ -66,13 +66,13 @@ fileprivate extension StarsStore {
         var state = state
         switch action {
         case let .addStar(id):
-            state.starsIDs.insert(id)
+            state.starsIds.insert(id)
         case let .removeStar(id):
-            state.starsIDs.remove(id)
+            state.starsIds.remove(id)
         case let .migrateFromV1Action(action):
             switch action {
             case let .migrationSucceeded(ids):
-                state.starsIDs.formUnion(ids)
+                state.starsIds.formUnion(ids)
             default:
                 break
             }
@@ -100,16 +100,16 @@ fileprivate extension StarsStore {
         }
     }
 
-    private static let starsIDsKey = "superlachaise.starsStore.starsIDs"
-    static var starsIDs: [String] {
+    private static let starsIdsKey = "superlachaise.starsStore.starsIds"
+    static var starsIds: [String] {
         get {
-            if let starsIDs = UserDefaults.standard.array(forKey: starsIDsKey) as? [String] {
-                return starsIDs
+            if let starsIds = UserDefaults.standard.array(forKey: starsIdsKey) as? [String] {
+                return starsIds
             }
             return []
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: starsIDsKey)
+            UserDefaults.standard.set(newValue, forKey: starsIdsKey)
         #if DEBUG
             UserDefaults.standard.synchronize()
         #endif
