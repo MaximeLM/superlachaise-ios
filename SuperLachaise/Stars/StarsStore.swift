@@ -7,11 +7,22 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct StarsStoreState {
     // Wikidata ids for primary wikidata entries (more stable than OpenStreetMap ids)
     var starsIds: Set<String>
     var migrateFromV1State: StarsStore.MigrateFromV1State
+
+    var starredOpenStreetMapElements: [OpenStreetMapElement] {
+        do {
+            let predicate = NSPredicate(format: "wikidataEntry.id IN %@", starsIds)
+            return Array(try Realm().objects(OpenStreetMapElement.self).filter(predicate))
+        } catch {
+            assertionFailure("\(error)")
+            return []
+        }
+    }
 }
 
 enum StarsStoreAction {
