@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 struct UIState {
-    var navigationState = NavigationState()
+    var rootState = RootState()
     var mapState = MapState()
     var detailState = DetailState()
     var searchState = SearchState()
@@ -36,9 +36,9 @@ class UIStore: Store<UIState, UIAction> {
 
 }
 
-// MARK: - Navigation
+// MARK: - Root
 
-enum NavigationScreen {
+enum RootScreen {
     case map
     case detail
     case search
@@ -46,8 +46,8 @@ enum NavigationScreen {
     case fullScreenGallery
 }
 
-struct NavigationState {
-    var screen: NavigationScreen = .map
+struct RootState {
+    var screen: RootScreen = .map
 }
 
 // MARK: - Map

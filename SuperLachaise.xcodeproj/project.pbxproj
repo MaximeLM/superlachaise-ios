@@ -25,9 +25,20 @@
 		557F1DDF1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DCE1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift */; };
 		557F1DE01EEBF577007AAE33 /* StarsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DCF1EEBF577007AAE33 /* StarsStore.swift */; };
 		557F1DE11EEBF577007AAE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557F1DD11EEBF577007AAE33 /* LaunchScreen.storyboard */; };
-		557F1DE21EEBF577007AAE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557F1DD21EEBF577007AAE33 /* Main.storyboard */; };
 		557F1DE31EEBF577007AAE33 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DD41EEBF577007AAE33 /* Store.swift */; };
-		557F1DF01EEC26F4007AAE33 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DEF1EEC26F4007AAE33 /* UIState.swift */; };
+		557F1DF51EEC296C007AAE33 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DF41EEC296C007AAE33 /* UIState.swift */; };
+		557F1DFD1EEC2A60007AAE33 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DFC1EEC2A60007AAE33 /* RootViewController.swift */; };
+		557F1E051EEC3172007AAE33 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1E031EEC3172007AAE33 /* MapViewController.swift */; };
+		557F1E061EEC3172007AAE33 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557F1E041EEC3172007AAE33 /* MapViewController.xib */; };
+		557F1E0C1EEC354B007AAE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557F1E0B1EEC354B007AAE33 /* Main.storyboard */; };
+		557F1E0F1EEC3660007AAE33 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1E0D1EEC3660007AAE33 /* DetailViewController.swift */; };
+		557F1E101EEC3660007AAE33 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557F1E0E1EEC3660007AAE33 /* DetailViewController.xib */; };
+		557F1E131EEC369A007AAE33 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1E111EEC369A007AAE33 /* GalleryViewController.swift */; };
+		557F1E141EEC369A007AAE33 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557F1E121EEC369A007AAE33 /* GalleryViewController.xib */; };
+		557F1E171EEC36DA007AAE33 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1E151EEC36DA007AAE33 /* SearchViewController.swift */; };
+		557F1E181EEC36DA007AAE33 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557F1E161EEC36DA007AAE33 /* SearchViewController.xib */; };
+		557F1E1B1EEC3705007AAE33 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1E191EEC3705007AAE33 /* SettingsViewController.swift */; };
+		557F1E1C1EEC3705007AAE33 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557F1E1A1EEC3705007AAE33 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +61,20 @@
 		557F1DCE1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarsStore+MigrateFromV1.swift"; sourceTree = "<group>"; };
 		557F1DCF1EEBF577007AAE33 /* StarsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsStore.swift; sourceTree = "<group>"; };
 		557F1DD11EEBF577007AAE33 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		557F1DD21EEBF577007AAE33 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		557F1DD41EEBF577007AAE33 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		557F1DEF1EEC26F4007AAE33 /* UIState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
+		557F1DF41EEC296C007AAE33 /* UIState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
+		557F1DFC1EEC2A60007AAE33 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		557F1E031EEC3172007AAE33 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		557F1E041EEC3172007AAE33 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		557F1E0B1EEC354B007AAE33 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		557F1E0D1EEC3660007AAE33 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		557F1E0E1EEC3660007AAE33 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		557F1E111EEC369A007AAE33 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		557F1E121EEC369A007AAE33 /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
+		557F1E151EEC36DA007AAE33 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		557F1E161EEC36DA007AAE33 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		557F1E191EEC3705007AAE33 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		557F1E1A1EEC3705007AAE33 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		7A33461299EF1C8F422B3C1E /* Pods_SuperLachaise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperLachaise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BD17D8AB76BEC395063267 /* Pods-SuperLachaise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperLachaise.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperLachaise/Pods-SuperLachaise.release.xcconfig"; sourceTree = "<group>"; };
 		FB4C9EB41C6156D0C8976542 /* Pods-SuperLachaise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperLachaise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperLachaise/Pods-SuperLachaise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,8 +172,14 @@
 			isa = PBXGroup;
 			children = (
 				557F1DD11EEBF577007AAE33 /* LaunchScreen.storyboard */,
-				557F1DD21EEBF577007AAE33 /* Main.storyboard */,
-				557F1DEE1EEC26F4007AAE33 /* UIState */,
+				557F1E0B1EEC354B007AAE33 /* Main.storyboard */,
+				557F1DFE1EEC3128007AAE33 /* Detail */,
+				557F1DFF1EEC3128007AAE33 /* Gallery */,
+				557F1E001EEC3128007AAE33 /* Map */,
+				557F1DFB1EEC2A60007AAE33 /* Root */,
+				557F1E011EEC3128007AAE33 /* Search */,
+				557F1E021EEC3128007AAE33 /* Settings */,
+				557F1DF31EEC296C007AAE33 /* State */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -164,12 +192,65 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		557F1DEE1EEC26F4007AAE33 /* UIState */ = {
+		557F1DF31EEC296C007AAE33 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				557F1DEF1EEC26F4007AAE33 /* UIState.swift */,
+				557F1DF41EEC296C007AAE33 /* UIState.swift */,
 			);
-			path = UIState;
+			path = State;
+			sourceTree = "<group>";
+		};
+		557F1DFB1EEC2A60007AAE33 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				557F1DFC1EEC2A60007AAE33 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		557F1DFE1EEC3128007AAE33 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				557F1E0D1EEC3660007AAE33 /* DetailViewController.swift */,
+				557F1E0E1EEC3660007AAE33 /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		557F1DFF1EEC3128007AAE33 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				557F1E111EEC369A007AAE33 /* GalleryViewController.swift */,
+				557F1E121EEC369A007AAE33 /* GalleryViewController.xib */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		557F1E001EEC3128007AAE33 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				557F1E031EEC3172007AAE33 /* MapViewController.swift */,
+				557F1E041EEC3172007AAE33 /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		557F1E011EEC3128007AAE33 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				557F1E151EEC36DA007AAE33 /* SearchViewController.swift */,
+				557F1E161EEC36DA007AAE33 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		557F1E021EEC3128007AAE33 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				557F1E191EEC3705007AAE33 /* SettingsViewController.swift */,
+				557F1E1A1EEC3705007AAE33 /* SettingsViewController.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		E6FFBC1DDE575C21CFFE052B /* Pods */ = {
@@ -243,10 +324,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557F1E0C1EEC354B007AAE33 /* Main.storyboard in Resources */,
+				557F1E1C1EEC3705007AAE33 /* SettingsViewController.xib in Resources */,
+				557F1E101EEC3660007AAE33 /* DetailViewController.xib in Resources */,
 				557F1DE11EEBF577007AAE33 /* LaunchScreen.storyboard in Resources */,
 				556717B81ED201F700C3A0A2 /* Assets.xcassets in Resources */,
 				556718021ED2567900C3A0A2 /* SuperLachaise.realm in Resources */,
-				557F1DE21EEBF577007AAE33 /* Main.storyboard in Resources */,
+				557F1E061EEC3172007AAE33 /* MapViewController.xib in Resources */,
+				557F1E181EEC36DA007AAE33 /* SearchViewController.xib in Resources */,
+				557F1E141EEC369A007AAE33 /* GalleryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,19 +405,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				557F1DE31EEBF577007AAE33 /* Store.swift in Sources */,
+				557F1DFD1EEC2A60007AAE33 /* RootViewController.swift in Sources */,
 				557F1DD71EEBF577007AAE33 /* CommonsFile.swift in Sources */,
 				557F1DE01EEBF577007AAE33 /* StarsStore.swift in Sources */,
 				557F1DDC1EEBF577007AAE33 /* WikidataDate.swift in Sources */,
 				557F1DDB1EEBF577007AAE33 /* StoreV1NodeIdMapping.swift in Sources */,
 				556717B11ED201F700C3A0A2 /* AppDelegate.swift in Sources */,
 				557F1DD91EEBF577007AAE33 /* LocalizedWikidataEntry.swift in Sources */,
-				557F1DF01EEC26F4007AAE33 /* UIState.swift in Sources */,
+				557F1DF51EEC296C007AAE33 /* UIState.swift in Sources */,
 				556717F21ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld in Sources */,
+				557F1E0F1EEC3660007AAE33 /* DetailViewController.swift in Sources */,
 				557F1DDE1EEBF577007AAE33 /* WikipediaPage.swift in Sources */,
 				557F1DD61EEBF577007AAE33 /* CommonsCategory.swift in Sources */,
+				557F1E1B1EEC3705007AAE33 /* SettingsViewController.swift in Sources */,
 				557F1DD51EEBF577007AAE33 /* Category.swift in Sources */,
+				557F1E051EEC3172007AAE33 /* MapViewController.swift in Sources */,
+				557F1E171EEC36DA007AAE33 /* SearchViewController.swift in Sources */,
 				557F1DDF1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift in Sources */,
 				557F1DDA1EEBF577007AAE33 /* OpenStreetMapElement.swift in Sources */,
+				557F1E131EEC369A007AAE33 /* GalleryViewController.swift in Sources */,
 				557F1DDD1EEBF577007AAE33 /* WikidataEntry.swift in Sources */,
 				557F1DD81EEBF577007AAE33 /* LocalizedCategory.swift in Sources */,
 			);
