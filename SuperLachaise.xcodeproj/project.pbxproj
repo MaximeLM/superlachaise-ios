@@ -8,49 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		0C12B45F8DC321D4E7F2B71B /* Pods_SuperLachaise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A33461299EF1C8F422B3C1E /* Pods_SuperLachaise.framework */; };
-		554239331EE2EACD00C19067 /* StarsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554239321EE2EACD00C19067 /* StarsStore.swift */; };
-		554239371EE2F20600C19067 /* StarsStore+MigrateFromV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554239361EE2F20600C19067 /* StarsStore+MigrateFromV1.swift */; };
 		556717B11ED201F700C3A0A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717B01ED201F700C3A0A2 /* AppDelegate.swift */; };
 		556717B81ED201F700C3A0A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556717B71ED201F700C3A0A2 /* Assets.xcassets */; };
-		556717C41ED202B800C3A0A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556717C21ED202B800C3A0A2 /* LaunchScreen.storyboard */; };
-		556717C51ED202B800C3A0A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556717C31ED202B800C3A0A2 /* Main.storyboard */; };
-		556717DA1ED20BB300C3A0A2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D11ED20BB300C3A0A2 /* Category.swift */; };
-		556717DB1ED20BB300C3A0A2 /* CommonsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D21ED20BB300C3A0A2 /* CommonsCategory.swift */; };
-		556717DC1ED20BB300C3A0A2 /* CommonsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D31ED20BB300C3A0A2 /* CommonsFile.swift */; };
-		556717DD1ED20BB300C3A0A2 /* LocalizedCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D41ED20BB300C3A0A2 /* LocalizedCategory.swift */; };
-		556717DE1ED20BB300C3A0A2 /* LocalizedWikidataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D51ED20BB300C3A0A2 /* LocalizedWikidataEntry.swift */; };
-		556717DF1ED20BB300C3A0A2 /* OpenStreetMapElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D61ED20BB300C3A0A2 /* OpenStreetMapElement.swift */; };
-		556717E01ED20BB300C3A0A2 /* WikidataDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D71ED20BB300C3A0A2 /* WikidataDate.swift */; };
-		556717E11ED20BB300C3A0A2 /* WikidataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D81ED20BB300C3A0A2 /* WikidataEntry.swift */; };
-		556717E21ED20BB300C3A0A2 /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717D91ED20BB300C3A0A2 /* WikipediaPage.swift */; };
 		556717F21ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 556717F01ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld */; };
-		556717FE1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556717FD1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift */; };
 		556718021ED2567900C3A0A2 /* SuperLachaise.realm in Resources */ = {isa = PBXBuildFile; fileRef = 556718011ED2567900C3A0A2 /* SuperLachaise.realm */; };
-		55F502541EDCB2DC00176DD9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F502531EDCB2DC00176DD9 /* Store.swift */; };
+		557F1DD51EEBF577007AAE33 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DC31EEBF577007AAE33 /* Category.swift */; };
+		557F1DD61EEBF577007AAE33 /* CommonsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DC41EEBF577007AAE33 /* CommonsCategory.swift */; };
+		557F1DD71EEBF577007AAE33 /* CommonsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DC51EEBF577007AAE33 /* CommonsFile.swift */; };
+		557F1DD81EEBF577007AAE33 /* LocalizedCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DC61EEBF577007AAE33 /* LocalizedCategory.swift */; };
+		557F1DD91EEBF577007AAE33 /* LocalizedWikidataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DC71EEBF577007AAE33 /* LocalizedWikidataEntry.swift */; };
+		557F1DDA1EEBF577007AAE33 /* OpenStreetMapElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DC81EEBF577007AAE33 /* OpenStreetMapElement.swift */; };
+		557F1DDB1EEBF577007AAE33 /* StoreV1NodeIdMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DC91EEBF577007AAE33 /* StoreV1NodeIdMapping.swift */; };
+		557F1DDC1EEBF577007AAE33 /* WikidataDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DCA1EEBF577007AAE33 /* WikidataDate.swift */; };
+		557F1DDD1EEBF577007AAE33 /* WikidataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DCB1EEBF577007AAE33 /* WikidataEntry.swift */; };
+		557F1DDE1EEBF577007AAE33 /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DCC1EEBF577007AAE33 /* WikipediaPage.swift */; };
+		557F1DDF1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DCE1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift */; };
+		557F1DE01EEBF577007AAE33 /* StarsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DCF1EEBF577007AAE33 /* StarsStore.swift */; };
+		557F1DE11EEBF577007AAE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557F1DD11EEBF577007AAE33 /* LaunchScreen.storyboard */; };
+		557F1DE21EEBF577007AAE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557F1DD21EEBF577007AAE33 /* Main.storyboard */; };
+		557F1DE31EEBF577007AAE33 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F1DD41EEBF577007AAE33 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		554239321EE2EACD00C19067 /* StarsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsStore.swift; sourceTree = "<group>"; };
-		554239361EE2F20600C19067 /* StarsStore+MigrateFromV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarsStore+MigrateFromV1.swift"; sourceTree = "<group>"; };
 		556717AD1ED201F700C3A0A2 /* SuperLachaise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperLachaise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556717B01ED201F700C3A0A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556717B71ED201F700C3A0A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		556717BC1ED201F700C3A0A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		556717C21ED202B800C3A0A2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		556717C31ED202B800C3A0A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		556717D11ED20BB300C3A0A2 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		556717D21ED20BB300C3A0A2 /* CommonsCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonsCategory.swift; sourceTree = "<group>"; };
-		556717D31ED20BB300C3A0A2 /* CommonsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonsFile.swift; sourceTree = "<group>"; };
-		556717D41ED20BB300C3A0A2 /* LocalizedCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedCategory.swift; sourceTree = "<group>"; };
-		556717D51ED20BB300C3A0A2 /* LocalizedWikidataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedWikidataEntry.swift; sourceTree = "<group>"; };
-		556717D61ED20BB300C3A0A2 /* OpenStreetMapElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenStreetMapElement.swift; sourceTree = "<group>"; };
-		556717D71ED20BB300C3A0A2 /* WikidataDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikidataDate.swift; sourceTree = "<group>"; };
-		556717D81ED20BB300C3A0A2 /* WikidataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikidataEntry.swift; sourceTree = "<group>"; };
-		556717D91ED20BB300C3A0A2 /* WikipediaPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
 		556717F11ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuperLachaiseV1.xcdatamodel; sourceTree = "<group>"; };
-		556717FD1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreV1NodeIdMapping.swift; sourceTree = "<group>"; };
 		556718011ED2567900C3A0A2 /* SuperLachaise.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = SuperLachaise.realm; path = "../../../superlachaise-database/Realm/SuperLachaise.realm"; sourceTree = "<group>"; };
-		55F502531EDCB2DC00176DD9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		557F1DC31EEBF577007AAE33 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		557F1DC41EEBF577007AAE33 /* CommonsCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonsCategory.swift; sourceTree = "<group>"; };
+		557F1DC51EEBF577007AAE33 /* CommonsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonsFile.swift; sourceTree = "<group>"; };
+		557F1DC61EEBF577007AAE33 /* LocalizedCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedCategory.swift; sourceTree = "<group>"; };
+		557F1DC71EEBF577007AAE33 /* LocalizedWikidataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedWikidataEntry.swift; sourceTree = "<group>"; };
+		557F1DC81EEBF577007AAE33 /* OpenStreetMapElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenStreetMapElement.swift; sourceTree = "<group>"; };
+		557F1DC91EEBF577007AAE33 /* StoreV1NodeIdMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreV1NodeIdMapping.swift; sourceTree = "<group>"; };
+		557F1DCA1EEBF577007AAE33 /* WikidataDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikidataDate.swift; sourceTree = "<group>"; };
+		557F1DCB1EEBF577007AAE33 /* WikidataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikidataEntry.swift; sourceTree = "<group>"; };
+		557F1DCC1EEBF577007AAE33 /* WikipediaPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
+		557F1DCE1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarsStore+MigrateFromV1.swift"; sourceTree = "<group>"; };
+		557F1DCF1EEBF577007AAE33 /* StarsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsStore.swift; sourceTree = "<group>"; };
+		557F1DD11EEBF577007AAE33 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		557F1DD21EEBF577007AAE33 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		557F1DD41EEBF577007AAE33 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		7A33461299EF1C8F422B3C1E /* Pods_SuperLachaise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperLachaise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1BD17D8AB76BEC395063267 /* Pods-SuperLachaise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperLachaise.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperLachaise/Pods-SuperLachaise.release.xcconfig"; sourceTree = "<group>"; };
 		FB4C9EB41C6156D0C8976542 /* Pods-SuperLachaise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperLachaise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperLachaise/Pods-SuperLachaise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				556717AF1ED201F700C3A0A2 /* SuperLachaise */,
-				556717AE1ED201F700C3A0A2 /* Products */,
-				E6FFBC1DDE575C21CFFE052B /* Pods */,
 				1E6A00340E253B401FE4E36D /* Frameworks */,
+				E6FFBC1DDE575C21CFFE052B /* Pods */,
+				556717AE1ED201F700C3A0A2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,32 +98,15 @@
 			isa = PBXGroup;
 			children = (
 				556717B01ED201F700C3A0A2 /* AppDelegate.swift */,
-				556717D01ED20BA300C3A0A2 /* Model */,
-				556717E51ED210B000C3A0A2 /* Stars */,
-				556717C71ED202E300C3A0A2 /* UI */,
 				556717B71ED201F700C3A0A2 /* Assets.xcassets */,
+				556717BC1ED201F700C3A0A2 /* Info.plist */,
+				557F1DC21EEBF577007AAE33 /* Model */,
 				556717CA1ED2072D00C3A0A2 /* Resources */,
-				55F502521EDCB2B400176DD9 /* Utils */,
-				556717C61ED202D700C3A0A2 /* Supporting Files */,
+				557F1DCD1EEBF577007AAE33 /* Stars */,
+				557F1DD01EEBF577007AAE33 /* UI */,
+				557F1DD31EEBF577007AAE33 /* Utils */,
 			);
 			path = SuperLachaise;
-			sourceTree = "<group>";
-		};
-		556717C61ED202D700C3A0A2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				556717BC1ED201F700C3A0A2 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		556717C71ED202E300C3A0A2 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				556717C21ED202B800C3A0A2 /* LaunchScreen.storyboard */,
-				556717C31ED202B800C3A0A2 /* Main.storyboard */,
-			);
-			name = UI;
 			sourceTree = "<group>";
 		};
 		556717CA1ED2072D00C3A0A2 /* Resources */ = {
@@ -135,38 +118,47 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		556717D01ED20BA300C3A0A2 /* Model */ = {
+		557F1DC21EEBF577007AAE33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				556717D61ED20BB300C3A0A2 /* OpenStreetMapElement.swift */,
-				556717D81ED20BB300C3A0A2 /* WikidataEntry.swift */,
-				556717D51ED20BB300C3A0A2 /* LocalizedWikidataEntry.swift */,
-				556717D71ED20BB300C3A0A2 /* WikidataDate.swift */,
-				556717D91ED20BB300C3A0A2 /* WikipediaPage.swift */,
-				556717D21ED20BB300C3A0A2 /* CommonsCategory.swift */,
-				556717D31ED20BB300C3A0A2 /* CommonsFile.swift */,
-				556717D11ED20BB300C3A0A2 /* Category.swift */,
-				556717D41ED20BB300C3A0A2 /* LocalizedCategory.swift */,
-				556717FD1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift */,
+				557F1DC31EEBF577007AAE33 /* Category.swift */,
+				557F1DC41EEBF577007AAE33 /* CommonsCategory.swift */,
+				557F1DC51EEBF577007AAE33 /* CommonsFile.swift */,
+				557F1DC61EEBF577007AAE33 /* LocalizedCategory.swift */,
+				557F1DC71EEBF577007AAE33 /* LocalizedWikidataEntry.swift */,
+				557F1DC81EEBF577007AAE33 /* OpenStreetMapElement.swift */,
+				557F1DC91EEBF577007AAE33 /* StoreV1NodeIdMapping.swift */,
+				557F1DCA1EEBF577007AAE33 /* WikidataDate.swift */,
+				557F1DCB1EEBF577007AAE33 /* WikidataEntry.swift */,
+				557F1DCC1EEBF577007AAE33 /* WikipediaPage.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		556717E51ED210B000C3A0A2 /* Stars */ = {
+		557F1DCD1EEBF577007AAE33 /* Stars */ = {
 			isa = PBXGroup;
 			children = (
-				554239321EE2EACD00C19067 /* StarsStore.swift */,
-				554239361EE2F20600C19067 /* StarsStore+MigrateFromV1.swift */,
+				557F1DCE1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift */,
+				557F1DCF1EEBF577007AAE33 /* StarsStore.swift */,
 			);
-			name = Stars;
+			path = Stars;
 			sourceTree = "<group>";
 		};
-		55F502521EDCB2B400176DD9 /* Utils */ = {
+		557F1DD01EEBF577007AAE33 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				55F502531EDCB2DC00176DD9 /* Store.swift */,
+				557F1DD11EEBF577007AAE33 /* LaunchScreen.storyboard */,
+				557F1DD21EEBF577007AAE33 /* Main.storyboard */,
 			);
-			name = Utils;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		557F1DD31EEBF577007AAE33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				557F1DD41EEBF577007AAE33 /* Store.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E6FFBC1DDE575C21CFFE052B /* Pods */ = {
@@ -240,10 +232,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				556717C51ED202B800C3A0A2 /* Main.storyboard in Resources */,
+				557F1DE11EEBF577007AAE33 /* LaunchScreen.storyboard in Resources */,
 				556717B81ED201F700C3A0A2 /* Assets.xcassets in Resources */,
-				556717C41ED202B800C3A0A2 /* LaunchScreen.storyboard in Resources */,
 				556718021ED2567900C3A0A2 /* SuperLachaise.realm in Resources */,
+				557F1DE21EEBF577007AAE33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,21 +307,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F502541EDCB2DC00176DD9 /* Store.swift in Sources */,
-				554239331EE2EACD00C19067 /* StarsStore.swift in Sources */,
-				554239371EE2F20600C19067 /* StarsStore+MigrateFromV1.swift in Sources */,
-				556717E21ED20BB300C3A0A2 /* WikipediaPage.swift in Sources */,
-				556717DF1ED20BB300C3A0A2 /* OpenStreetMapElement.swift in Sources */,
-				556717E01ED20BB300C3A0A2 /* WikidataDate.swift in Sources */,
-				556717E11ED20BB300C3A0A2 /* WikidataEntry.swift in Sources */,
-				556717DC1ED20BB300C3A0A2 /* CommonsFile.swift in Sources */,
-				556717DB1ED20BB300C3A0A2 /* CommonsCategory.swift in Sources */,
-				556717DD1ED20BB300C3A0A2 /* LocalizedCategory.swift in Sources */,
+				557F1DE31EEBF577007AAE33 /* Store.swift in Sources */,
+				557F1DD71EEBF577007AAE33 /* CommonsFile.swift in Sources */,
+				557F1DE01EEBF577007AAE33 /* StarsStore.swift in Sources */,
+				557F1DDC1EEBF577007AAE33 /* WikidataDate.swift in Sources */,
+				557F1DDB1EEBF577007AAE33 /* StoreV1NodeIdMapping.swift in Sources */,
 				556717B11ED201F700C3A0A2 /* AppDelegate.swift in Sources */,
-				556717FE1ED2500500C3A0A2 /* StoreV1NodeIdMapping.swift in Sources */,
+				557F1DD91EEBF577007AAE33 /* LocalizedWikidataEntry.swift in Sources */,
 				556717F21ED2144900C3A0A2 /* SuperLachaiseV1.xcdatamodeld in Sources */,
-				556717DE1ED20BB300C3A0A2 /* LocalizedWikidataEntry.swift in Sources */,
-				556717DA1ED20BB300C3A0A2 /* Category.swift in Sources */,
+				557F1DDE1EEBF577007AAE33 /* WikipediaPage.swift in Sources */,
+				557F1DD61EEBF577007AAE33 /* CommonsCategory.swift in Sources */,
+				557F1DD51EEBF577007AAE33 /* Category.swift in Sources */,
+				557F1DDF1EEBF577007AAE33 /* StarsStore+MigrateFromV1.swift in Sources */,
+				557F1DDA1EEBF577007AAE33 /* OpenStreetMapElement.swift in Sources */,
+				557F1DDD1EEBF577007AAE33 /* WikidataEntry.swift in Sources */,
+				557F1DD81EEBF577007AAE33 /* LocalizedCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
